@@ -1,0 +1,77 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="appBackground">
+  <ion-card>
+    <ion-card-header>
+ 
+    </ion-card-header>
+    <ion-card-content>
+	
+	    
+ <form [formGroup]="form" (ngSubmit)="signup()">
+<ion-list>
+				
+               <ion-item>
+                  <ion-label floating>Nama *</ion-label>
+                  <ion-input
+                        type="text"
+                        formControlName="nama"
+                        [(ngModel)]="userData.name"></ion-input>
+                  
+               </ion-item>
+				<ion-item>
+                  <ion-label floating>E-Mail *</ion-label>
+                  <ion-input
+                        type="text"
+                        formControlName="email"
+                        [(ngModel)]="userData.email"></ion-input>
+                  
+               </ion-item>
+               <ion-item>
+                  <ion-label floating>Username *</ion-label>
+                  <ion-input
+                        type="text"
+                        formControlName="username"
+                        [(ngModel)]="userData.username"></ion-input> /ion-input>
+                  
+               </ion-item>
+               <ion-item>
+                  <ion-label floating>Password *</ion-label>
+                  <ion-input
+                        type="password"
+                        formControlName="password"
+                        [(ngModel)]="userData.password"></ion-input>
+                  
+               </ion-item>
+               
+               <ion-item>
+                  <ion-label floating>Re-Password *</ion-label>
+                  <ion-input
+                        type="password"
+                        formControlName="repassword" 
+                        [(ngModel)]="userData.repassword"></ion-input>
+                  
+               </ion-item>
+               
+			   <ion-item>
+                  <button
+                     ion-button
+                     color="primary"
+                     text-center
+                     block
+                     [disabled]="!form.valid">Sign Up</button>
+               </ion-item>
+
+            </ion-list>
+  </form>
+  
+     </ion-card-content>
+  </ion-card>
+</ion-content>
